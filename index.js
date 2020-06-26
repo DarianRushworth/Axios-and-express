@@ -3,11 +3,14 @@ const express = require('express')
 
 const app = express()
 
-const days = {
-    "today" :"Servers, npm,axios",
-    "yesterday" :"Git, callbacks"
-}
-app.get("/json", (request, response) => {
+
+app.get(
+    "/json", 
+    (request, response) => {
+    const days = {
+        "today" :"Servers, npm, axios",
+        "yesterday" :"Git, callbacks"
+    }
     response.send(days)
 })
 
